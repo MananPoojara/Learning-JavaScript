@@ -1,0 +1,100 @@
+/*Transform*/
+/* #box1 {
+    border: 2px solid black;
+    width: 250px;
+    height: 250px;
+    font-size: 200px;
+    text-align: center;
+    background-color: aquamarine;
+
+    transform: translateX(80px);
+    transform: translateY(70px); 
+    transform: translate(50px, 50px);
+    transform: rotateX(180deg);
+    transform: rotateZ(100deg);
+    transform: rotateZ(150deg); 
+    transform: rotate(100deg);
+    transform: scaleX(3);
+    transform: scaleY(3);
+    transform: scale(4); 
+    transform: skewX(20deg);
+    transform: skewY(20deg);
+    transform: skew(20deg); 
+} */
+
+
+/* Animation */
+/*#box1 {
+    border: 2px solid black;
+    width: 250px;
+    height: 250px;
+    font-size: 200px;
+    text-align: center;
+    background-color: aquamarine;
+    animation: changecolor 4s linear 0s infinite;
+
+}
+
+#box1:hover {
+    animation: myrotate 4s linear 0s infinite;
+
+}
+
+@keyframes myslide {
+    from {
+        margin-left: 0%;
+    }
+
+    to {
+        margin-left: 10%;
+    }
+}
+
+@keyframes myrotate {
+    from {
+        transform: skewX(0deg);
+    }
+
+    to {
+        transform: skewY(80deg);
+    }
+}
+
+@keyframes changecolor {
+    0% {
+        background-color: aquamarine;
+    }
+
+    20% {
+        background-color: red;
+    }
+
+    40% {
+        background-color: blue;
+    }
+
+    60% {
+        background-color: purple;
+    }
+
+    80% {
+        background-color: yellow;
+    }
+
+    100% {
+        background-color: green;
+    }
+
+}
+*/
+
+#event {
+    font-size: 4.5rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    background-color: lightgreen;
+    width: 290px;
+    height: 300px;
+}

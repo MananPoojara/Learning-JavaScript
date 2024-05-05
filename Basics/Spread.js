@@ -11,5 +11,5 @@ console.log(numbers)
 
 let string = "Hello World"
 let letters = [...string].join('-');
-console.log(letters)  
-let bc = [2.2, 232, 322,3]
+console.log(letters)
+let bc = [2.2, 232, 322, 3]

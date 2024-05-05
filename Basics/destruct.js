@@ -17,6 +17,8 @@ let colors = ["red", "yellow", "blue", "green", "white"];
 console.log(colors);
 [colors[0], colors[4]] = [colors[4], colors[0]];
 console.log(colors);
+
+
 const [firstColor, secondColor, ThirdColor, ...extraColor] = colors;
 console.log(firstColor);
 console.log(secondColor);

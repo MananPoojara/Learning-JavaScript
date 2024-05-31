@@ -52,3 +52,25 @@ var checkUser = (name, pass) => {
 
 
 userInfo("xyz", "123478", checkUser)
+
+
+
+
+var square = (n) => {
+    return n * n;
+}
+var cube = (n) => {
+    return n * n * n;
+}
+var quad = (n) => {
+    return n * n * n * n;
+}
+
+var callback = (num1, num2, fn) => {
+    let square1 = fn(num1)
+    let square2 = fn(num2)
+    return square1 + square2;
+}
+
+console.log(callback(2, 2, square))
+console.log(callback(2, 2, cube))

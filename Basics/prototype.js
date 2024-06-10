@@ -27,6 +27,11 @@ class SuperHuman extends Human {
         return "Flying"
     }
 }
+
+
+
+
+
 // undefined
 const sam = new SuperHuman();
 // undefined

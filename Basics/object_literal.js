@@ -30,3 +30,12 @@ const greete = {
 }
 
 console.log(greete.sayhi('manan'))
+
+
+function getcar(carName, Model) {
+    return {
+        [carName.toUpperCase()]: Model,
+    }
+}
+
+console.log(getcar('maruti', 'sizuki'))

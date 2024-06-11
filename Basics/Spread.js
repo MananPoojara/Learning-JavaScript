@@ -13,3 +13,18 @@ let string = "Hello World"
 let letters = [...string].join('-');
 console.log(letters)
 let bc = [2.2, 232, 322, 3]
+
+
+const obj1 = {
+    a: 'from a',
+    b: 'from b',
+    c: 'from c',
+    d: {
+        g: 'from g',
+        h: 'from h',
+    }
+}
+
+const obj2 = { ...obj1 }
+
+console.log(obj2)

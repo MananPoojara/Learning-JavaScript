@@ -1,6 +1,6 @@
 // HungMan is game where we have to guess the word like _ _ _ _ word is "Code" now one by one we have to give letter like 'c'... so on and we have 3 tries for guess right number
 
-const { cp } = require('fs');
+const { cp, read } = require('fs');
 
 
 // for input we use node 'readline' module
@@ -10,60 +10,60 @@ const readline = require('readline').createInterface({
 })
 
 // for tracking user try
-var count = 0;
+var count = 3;
 var str = "javascript"
+var arr = Array.from(str);
+var underscores = arr.map(() => '_');
 
 readline.question('Enter Your Name : ', name => {
     console.log(`Welcome to HungMan ${name}!`)
-    main(str);
-    if (count == 3) {
-        readline.close();
-    }
+    displaycurrentanswer();
+    main();
 })
 
 
-var attampts = () => {
-    if (count == 0) {
-        console.log(underscores.join(' '))
-    } else if (count == 1) {
-        console.log("you have 2 try left ")
-    } else if (count == 2) {
-        console.log("Last Try!!")
-    } else if (count == 3) {
-        console.log("You lost!!")
-    }
+var displaycurrentanswer = () => {
+    console.log(underscores.join(' '))
 }
 
-function main(str) {
-    let arr = Array.from(str);
-    let underscores = arr.map(() => '_');
-
-
-    if (count == 3) {
-        console.log("Better Luck Next Time!!😔")
-        readline.close();
-        count = 0;
-    } else if (count == 0) {
-        console.log("Game On !!!")
-        readline.question("Enter Letter : ", letter => {
-            if (letter.length === 1 && /^[a-zA-Z]$/.test(letter)) {
-                for (let i = 0; i < arr.length; i++) {
-                    if (letter === arr[i]) {
-                        underscores[i] = letter;
-                        attampts();
-                    }
-                    else {
-                        count++;
-                    }
+function main() {
+    readline.question("Enter a letter : ", letter => {
+        if (letter.length === 1 && /^[a-zA-Z]$/.test(letter)) {
+            let correctguess = false;
+            for (let i = 0; i < arr.length; i++) {
+                if (letter === arr[i]) {
+                    underscores[i] = letter;
+                    correctguess = true;
                 }
+            }
+            if (!correctguess) {
+                count--;
+                console.log(`wrong answer you have ${count} attempt left`);
             } else {
-                console.log("Invalid input. Please enter a single letter.");
+                console.log("Correct answer");
             }
 
-        })
-    }
+            displaycurrentanswer();
 
+            if (underscores.join('') === str) {
+                console.log("You Guessed the correct answer : ", str)
+                readline.close();
+            }
+            else if (count > 0) {
+                main()
+            } else {
+                console.log("Better luck next time!!")
+                readline.close();
+            }
+        }
+        else {
+            console.log("invalid input please enter single letter at a time");
+            main();
+        }
+
+    })
 }
+
 
 
 

@@ -1,7 +1,5 @@
 // HungMan is game where we have to guess the word like _ _ _ _ word is "Code" now one by one we have to give letter like 'c'... so on and we have 3 tries for guess right number
 
-const { cp, read } = require('fs');
-
 
 // for input we use node 'readline' module
 const readline = require('readline').createInterface({
@@ -9,12 +7,19 @@ const readline = require('readline').createInterface({
     output: process.stdout
 })
 
+
 // for tracking user try
 var count = 3;
+// Our String
 var str = "javascript"
+// converting into array
 var arr = Array.from(str);
+// for all character in arr convert into _ _ _ _ 
 var underscores = arr.map(() => '_');
 
+
+
+// asking name 
 readline.question('Enter Your Name : ', name => {
     console.log(`Welcome to HungMan ${name}!`)
     displaycurrentanswer();
@@ -22,10 +27,13 @@ readline.question('Enter Your Name : ', name => {
 })
 
 
+// current answer is _ _ _ _ _ _ -> j _ _ _ _ _ -> j a _ a _ _ _ _ _ 
 var displaycurrentanswer = () => {
     console.log(underscores.join(' '))
 }
 
+
+// main function for accepting letters and mapping to _ _ _ _ _ _ 
 function main() {
     readline.question("Enter a letter : ", letter => {
         if (letter.length === 1 && /^[a-zA-Z]$/.test(letter)) {

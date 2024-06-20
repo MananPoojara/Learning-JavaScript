@@ -47,11 +47,15 @@ function mapInfo() {
         console.log("hello word")
     }, 2)
 
+    const [...keys] = map.keys();
+    const [...values] = map.values();
     return {
         mapsize: map.size,
         maphas: map.has(5),
-        keysize: Object.keys(map),
-        values: map.values(),
+        // keysize: Object.keys(map),
+        // values: map.values(),
+        keys,
+        values,
 
     }
 }

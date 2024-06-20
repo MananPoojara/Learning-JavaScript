@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Gen</title>
+</head>
+
+<body>
+    <div class="main">
+        <input type="text" class="txt" placeholder="Enter The Text..">
+        <button class="btn" type="submit" onclick=work()>Submit</button>
+        <div class="img">
+            <img src="" alt="qrcode" class="qr">
+        </div>
+    </div>
+</body>
+<script>
+    const text = document.getElementsByClassName("txt")[0];
+    const btn = document.getElementsByClassName("btn")[0]
+    const img = document.getElementsByClassName("qr")[0];
+
+
+    function work() {
+        let qrvalue = text.value;
+        img.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${qrvalue}`
+        console.log(text);
+        console.log(qrvalue);
+    }
+</script>
+
+</html>

@@ -62,3 +62,7 @@ function mapInfo() {
 
 
 console.log(mapInfo());
+
+
+
+// Map / Filters 

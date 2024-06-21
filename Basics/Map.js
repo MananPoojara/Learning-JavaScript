@@ -90,9 +90,16 @@ const arr = [1, 2, 3, 4, 5, 6]
 // const ans = arr.map(function multi(i) {
 //     return i * i;
 // })
+//transform array
 const ans = arr.map((i) => {
-    return i * i;
+    const array = [43, 53, 2, 24, 5, 2224, 55]
+    return array[i];
 })
 
 //i provided threee ways of doing this 
 console.log(ans)
+
+
+
+
+// let's Learn filter

@@ -66,3 +66,33 @@ console.log(mapInfo());
 
 
 // Map / Filters 
+
+// what's the purpose of using map and filter let see 
+
+// array [1,2,3,4,5,6] to => [1,4,9,16,25,36]
+
+// var arr2 = [1, 2, 3, 4, 5, 6];
+
+// // var newArray = [];
+
+// // function multi(arr) {
+// //     for (let i = 0; i < arr.lengthl; i++) {
+// //         newArray.push(arr[i] * arr[i]);
+// //     }
+// //     return newArray;
+// // }
+// // console.log(multi(arr2));
+
+const arr = [1, 2, 3, 4, 5, 6]
+// function multi(i) {
+//     return i * i;
+// }
+// const ans = arr.map(function multi(i) {
+//     return i * i;
+// })
+const ans = arr.map((i) => {
+    return i * i;
+})
+
+//i provided threee ways of doing this 
+console.log(ans)

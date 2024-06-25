@@ -1,20 +1,15 @@
-// eventlistner = addeventlistener(evnet, callback)
-// emoji.addEventListener(event, callback);
-
-const emoji = document.getElementById("event")
-
-emoji.addEventListener("click", event => {
-    event.target.style.backgroundColor = "tomato"
-    event.target.textContent = "Ouch!! 🤯"
-});
+// Making Events starts with creating Listener That linten what the F you wnat to do and call the event 
 
 
-emoji.addEventListener("mouseover", event => {
-    event.target.style.backgroundColor = "yellow";
-    event.target.textContent = "Don't Click 😞"
-});
+document.getElementById("event").addEventListener('click', function (e) {
+    // alert("Fuck go deeper event")
+    document.getElementById("event").style.background = 'red'
+    //let see what happen in event
+    console.log(e)
+    //we can see the description where so many things are there
 
-emoji.addEventListener("mouseout", event => {
-    event.target.style.backgroundColor = "lightgreen";
-    event.target.textContent = "Click Me 😄"
-});
+}, false)
+
+//type:"Click", timestamp, clientX, clientY, ScreenX, ScreenY, srcElement : div#event, location : of host
+// this are the event you can play with 
+

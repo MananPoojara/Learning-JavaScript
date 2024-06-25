@@ -23,11 +23,12 @@ document.getElementById("event").addEventListener('click', function (e) {
 //now we have UL  and  LI so start with bubbling
 document.getElementById("baap").addEventListener('click', function (e) {
     console.log("Baap Baap Hota Hai")
-}, true)//third parameter is the boolen for Event Propogation
+}, false)//third parameter is the boolen for Event Propogation
 //by default false
 document.getElementById("beta").addEventListener('click', function (e) {
     console.log("Beta Beta Hota Hai")
-}, true)
+    e.stopPropagation();
+}, false)
 
 // Here The Propgation is
 // ** false ** //
@@ -44,3 +45,7 @@ document.getElementById("beta").addEventListener('click', function (e) {
 //it's a Capture Mode top to bottom
 // Baap Baap Hota Hai
 // Beta Beta Hota Hai
+
+
+// In some case we have saperate script for ul and li and both are doing their saprate things so we have stop the propogatio
+//e.stopPropagation();

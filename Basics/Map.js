@@ -103,3 +103,12 @@ console.log(ans)
 
 
 // let's Learn filter
+const filterans = arr.filter((n) => {
+    if (n % 2 == 0) {
+        return true;
+    } else {
+        return false;
+    }
+})
+
+console.log(filterans)

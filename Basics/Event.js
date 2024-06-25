@@ -13,3 +13,11 @@ document.getElementById("event").addEventListener('click', function (e) {
 //type:"Click", timestamp, clientX, clientY, ScreenX, ScreenY, srcElement : div#event, location : of host
 // this are the event you can play with 
 
+
+// Now Let's Go deeper
+// Bubbling
+// Capturing
+//{addEventLitener} try in console of browser we see above terms in boolean
+
+
+

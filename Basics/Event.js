@@ -49,3 +49,11 @@ document.getElementById("beta").addEventListener('click', function (e) {
 
 // In some case we have saperate script for ul and li and both are doing their saprate things so we have stop the propogatio
 //e.stopPropagation();
+
+
+// New Func for prevent default behaviour of events like we have one google href that go to google when click but we don't want to go google so we can use preventdefault()
+
+document.getElementById('web').addEventListener('click', function (e) {
+    e.preventDefault()
+    document.body.append("google click kiya")
+}, false)

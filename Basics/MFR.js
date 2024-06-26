@@ -20,7 +20,7 @@ const newb = mynums.filter((i) => {
 })
 console.log(newb);
 //we can see difference in line of code
-
+// alse filter only return if the expression is true that's why we can't do any arithmetic opr
 
 //example
 const books = [
@@ -77,3 +77,7 @@ const user = books.filter((book) => {
 })
 
 console.log(user);
+
+
+// Map
+

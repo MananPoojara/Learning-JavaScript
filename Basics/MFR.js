@@ -84,9 +84,53 @@ console.log(user);
 // Map
 var number = [1, 2, 3, 4, 6, 67, 8, 5]
 var news = []
-const updateBook = number.map((num) => num + 200).map((num) => num + 200).filter((num) => num > 405
+const update = number.map((num) => num + 200).map((num) => num + 200).filter((num) => num > 405
 )
 // map chaining where we can use map and map filter
 // also if you do (()=>{ return smthing cause scope}) and if u do (()=> no need to return)
-console.log(updateBook);
+console.log(update);
+
+
+// Reduce()
+// reduce has 2 parameter 
+// ==> first callback func
+// accumlator
+//currentvalur
+// and  
+// ==> Second parameter init value
+
+var reduce = number.reduce((acc, currval) => {
+    console.log(`acc : ${acc} and curval: ${currval}`)
+    return acc + currval;
+}, 0)
+
+console.log(reduce);
+//we can see that init value is given to acc and then currvalue is 0th index of array
+
+
+// understand by example 
+
+var shoppingCart = [
+    {
+        course: "js",
+        price: 2000
+    },
+    {
+        course: "node js",
+        price: 3000
+    },
+    {
+        course: "py",
+        price: 5000
+    },
+    {
+        course: "dsa",
+        price: 9000
+    },
+]
+
+
+//we have to see total of this course
+const total = shoppingCart.reduce((acc, item) => (acc + item.price), 0)
+console.log(total);
 

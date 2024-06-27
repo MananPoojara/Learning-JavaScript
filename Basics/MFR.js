@@ -23,7 +23,7 @@ console.log(newb);
 // alse filter only return if the expression is true that's why we can't do any arithmetic opr
 
 //example
-const books = [
+var books = [
     {
         title: "The Great Gatsby",
         author: "F. Scott Fitzgerald",
@@ -78,6 +78,15 @@ const user = books.filter((book) => {
 
 console.log(user);
 
+// alse filter only return if the expression is true that's why we can't do any arithmetic opr
+// so Map comes here
 
 // Map
+var number = [1, 2, 3, 4, 6, 67, 8, 5]
+var news = []
+const updateBook = number.map((num) => num + 200).map((num) => num + 200).filter((num) => num > 405
+)
+// map chaining where we can use map and map filter
+// also if you do (()=>{ return smthing cause scope}) and if u do (()=> no need to return)
+console.log(updateBook);
 

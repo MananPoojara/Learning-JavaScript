@@ -5,3 +5,32 @@
 
 
 
+//Phase of promise 
+// pending - waiting
+// resolve - get the promise
+// reject - not get promise
+
+
+function getwether() {
+    return new Promise(function (resolve, reject) {
+        reject('Sunny')
+    })
+}
+
+// nicer way
+function OnSuccess(data) {
+    console.log(`Success : ${data}`)
+}
+function OnError(err) {
+    console.log(`Error: ${err}`)
+}
+
+getwether().then(OnSuccess, OnError)
+
+// pp.then(function (data) {
+//     console.log(`first param ${data}`);
+// },
+//     function (data) {
+//         console.log(`second param ${data}`)
+//     })
+//Promise { 'Sunny' }  Sunny

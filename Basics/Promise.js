@@ -9,6 +9,7 @@
 // pending - waiting
 // resolve - get the promise
 // reject - not get promise
+// no callback no callback hell
 
 
 function getwether() {
@@ -17,6 +18,28 @@ function getwether() {
             resolve("Sunny")
         }, 1000)
     })
+}
+
+function getwethericon(wether) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            switch (wether) {
+                case 'Sunny':
+                    resolve('☀️')
+                    break
+                case 'Cloudy':
+                    resolve('☁️')
+                    break
+                case 'Rainy':
+                    resolve('☔')
+                    break
+                default:
+                    reject("No icon found")
+            }
+        })
+
+    })
+
 }
 
 
@@ -28,7 +51,14 @@ function OnError(err) {
     console.log(`Error: ${err}`)
 }
 
-getwether().then(OnSuccess, OnError)
+// getwether().then(OnSuccess, OnError)
+// let's see promise chainig
+getwether()
+    .then(getwethericon)
+    .then(OnSuccess, OnError)
+
+
+
 
 // pp.then(function (data) {
 //     console.log(`first param ${data}`);

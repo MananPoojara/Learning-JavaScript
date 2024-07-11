@@ -13,9 +13,12 @@
 
 function getwether() {
     return new Promise(function (resolve, reject) {
-        reject('Sunny')
+        setTimeout(() => {
+            resolve("Sunny")
+        }, 1000)
     })
 }
+
 
 // nicer way
 function OnSuccess(data) {
@@ -34,3 +37,4 @@ getwether().then(OnSuccess, OnError)
 //         console.log(`second param ${data}`)
 //     })
 //Promise { 'Sunny' }  Sunny
+

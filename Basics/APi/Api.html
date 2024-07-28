@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 
-<body style="background-color: #212121;">
-
+<body style="background-color: #212121; color: aliceblue;">
+    <h3 class="data"></h3>
 </body>
 <script>
 
@@ -18,6 +18,8 @@
     function working() {
         const data = JSON.parse(this.responseText);
         console.log(data)
+        const h3 = document.querySelector(".data")
+        h3.innerHTML = `getting data from api name : ${data.bio}`
     }
     xhr.open("GET", apiURl);
     xhr.addEventListener("load", working)

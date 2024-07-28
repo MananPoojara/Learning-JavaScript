@@ -3,5 +3,5 @@
 
 # TODO List
 
-- [ ] Make Each Folder For Each Files
+- [x] Make Each Folder For Each Files
 - [ ] Make Readme File For Each Topics
